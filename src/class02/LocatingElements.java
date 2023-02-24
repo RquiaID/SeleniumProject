@@ -27,7 +27,7 @@ public class LocatingElements {
       //  driver.findElement(By.linkText("Create new account")).click();  ===> we comment this ,so we can practice forgot password
 
      //click on forgotten password
-        driver.findElement(By.partialLinkText("password?")).click();
+       driver.findElement(By.partialLinkText("password?")).click();
         driver.quit();
     }
 }
