@@ -35,7 +35,5 @@ close the browser
         driver.close();
 
 
-
-
     }
 }
