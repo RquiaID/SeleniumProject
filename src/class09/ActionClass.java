@@ -4,10 +4,23 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 
 public class ActionClass {
     public static void main(String[] args) {
+
+/*      public static ChromeOptions options;
+      public static WebDriver driver;
+
+      options =new chromeOptions();
+      options.addArgument("--start-maximized");
+      options.addArgument("--remote-allow-origins=*");*//**//*
+       driver = new ChromeDriver(options);*//*
+      driver.get  */
+
+
+
 
 //        tell your project where the webdriver is located.
 //        for mac user please do not use .exe with chromedriver

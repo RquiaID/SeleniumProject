@@ -34,17 +34,21 @@ public class DynamicTableDemo1 {
         for (int i = 0; i < id.size(); i++) {
 
             String text = id.get(i).getText();
-            if (text.equalsIgnoreCase("52306A")) {
+            if (text.equalsIgnoreCase("52483A")) {
                 System.out.println(text);
-                WebElement checkBox=driver.findElement(By.xpath("//table[@id='resultTable']/tbody/tr["+(i+1)+"]/td[1]"));
-                checkBox.click();
+                //this line helps us find the correct index of the WebElement because iteration starts always with 0 BUT table starts with 1
+                // in that table "52306A" is located in the 11th row of the table but i places it on 10 cuz index starts in 0
+                System.out.println("The row number that contains id is "+i);
+                WebElement checkBox = driver.findElement(By.xpath("//table[@id='resultTable']/tbody/tr[" + (i + 1) + "]/td[1]"));
+               checkBox.click();
 
 
             }
+        }}
 
         }
-    }
-}
+
+
 
 
 

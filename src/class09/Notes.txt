@@ -1,0 +1,147 @@
+
+tables with pagination--> having multiple pages
+
+
+
+1.  get all the values of the table column on page 1
+
+2. look for the desried id
+
+3. if found()  --> click the checkbox and break;
+
+4. if not found continue until all values are checked
+
+
+5. if all values are checked on the page but still not found
+
+6. click on the next page and repeat from step 2
+
+
+stale Element exception:
+
+
+
+jsExecutor-->
+scroll
+drag and drop
+click
+
+
+
+
+----------------------------------------------------------------------------------
+table with pagination
+
+stale element exception:page is refreshed and elements are discarded
+sol: is to get those elements again.
+
+
+
+
+calanders:
+1. drop down, table
+
+2.calander with a slider
+
+approach:
+
+1. look for month  , if that is not correct
+                                  click on next
+                      repeat this until u find the right month
+
+2. once the right month is found select the date
+
+
+
+-------------------------------------------------------------------------------
+
+
+Screen Shots
+
+1. import the jars common.io
+
+
+                  ------ take screenshot-------
+
+       1. TakesScreenshot ss = (TakesScreenshot) driver;
+//        take the scrren shot as file
+
+      2.  File sourceFile = ss.getScreenshotAs(OutputType.FILE);--->getScreenshotAs-->takes a screenshot
+
+//        save the file in computer
+ 		FileUtils.copyFile(source,destination)
+
+        FileUtils.copyFile(sourceFile,new File("C:/Users/moazzam/Desktop/Batch14/SeleniumBatch15/SS/abcd.png"));
+
+        sourcefile--> the file that contains the screenshot
+        new file  --> the file where the screenshot will be saved
+
+
+
+
+ ---------------------------------------------------------------
+
+ Js executor
+
+
+ u can perform alot of various actions using js executor
+
+ 1.click
+ 2.scroll
+ 3.hihlight
+ 4.drag and drop
+
+
+
+approach:
+declaration
+ 1. JavaScript Executor js=(javaScriptExecutor)driver;
+
+ call the method of scipt
+
+ 2. js.executescript("")
+
+
+
+
+ -------------------------------------------------------------------------------
+ action class
+
+1. click
+2.rightclick
+2.draganddrop
+3.hover
+4.scroll
+
+
+Approach:
+
+1.declaration
+
+ Actions action= new Actions (driver)
+
+2.action.choose ur action.perform();
+
+   action.draganddrop().perform();
+
+
+
+----------------------------------------------------------------------------
+upload file
+
+
+
+can u upload a file through window popup in selenium
+ no. cant handle in selenium
+
+
+
+1. find the WebElement to which u want to uplaod the file  (lets say the button that uplaod the file)
+
+2. WebElement.sendKeys(path)-->path is the path to ur file that u want to uplaod .
+
+extension---> any extension that is there depending on the origin of the file
+
+
+
+----------------------------------------------------------------------------------

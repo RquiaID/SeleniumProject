@@ -35,10 +35,17 @@ public class TablesDynamic {
 
 //            extract the text
             String text = column.get(i).getText();
-            if(text.equalsIgnoreCase("ScreenSaver")){
+            if(text.equalsIgnoreCase("FamilyAlbum")){
                 System.out.println(text);
+                // "i" is the entety that show me which row number ScreenSaver is
+               System.out.println("the row that contains FamilyAlbum is "+i); //this will help us find the correct index location of the row or column cuz loop index starts from 0 while  table starts from 1
+                System.out.println("the row that contains FamilyAlbum is "+(i+2));
                 System.out.println("check the check box");
-                // I have built up dynamic path using this
+
+                WebElement checkbox = driver.findElement(By.xpath("//table[@class='SampleTable']/tbody/tr[" + (i + 2) + "]/td[1]"));
+                checkbox.click();
+
+                // //table[@class='SampleTable']/tbody/tr[" + (i + 2) + "]/td[1] this xpath will check all checkboxes
 
 
 
